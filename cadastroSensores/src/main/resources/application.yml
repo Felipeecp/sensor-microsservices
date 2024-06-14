@@ -4,7 +4,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb+srv://devUser:root4321@cluster0.jjvyex7.mongodb.net/sensorsDb?retryWrites=true&w=majority&appName=Cluster0
+      uri: ${MONGODB_URI}
 
 
 eureka:

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: SensorColetaDeDados
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+
+server:
+  port: 0
