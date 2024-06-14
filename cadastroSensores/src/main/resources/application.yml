@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cadastrosensores
+
+  data:
+    mongodb:
+      uri: mongodb+srv://devUser:root4321@cluster0.jjvyex7.mongodb.net/sensorsDb?retryWrites=true&w=majority&appName=Cluster0
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      instance-id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+
+server:
+  port: 0
